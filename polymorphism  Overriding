@@ -1,0 +1,58 @@
+Polymorphism allows methods to do different things based on the object it is acting upon.
+......
+
+// Define the Car class
+class Car {
+    String brand;
+    String color;
+    int year;
+    
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Color: " + color);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Define the ElectricCar class that inherits from Car
+class ElectricCar extends Car {
+    int batteryLife;
+    
+    // Overriding the displayInfo method
+    @Override
+    void displayInfo() {
+        System.out.println("Electric Car Brand: " + brand);
+        System.out.println("Electric Car Color: " + color);
+        System.out.println("Electric Car Year: " + year);
+        System.out.println("Battery Life: " + batteryLife + " hours");
+    }
+}
+
+// Main class to test polymorphism
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of the ElectricCar class
+        ElectricCar myElectricCar = new ElectricCar();
+        
+        // Set properties of the electric car
+        myElectricCar.brand = "Tesla";
+        myElectricCar.color = "Blue";
+        myElectricCar.year = 2023;
+        myElectricCar.batteryLife = 12;
+        
+        // Call the overridden method
+        myElectricCar.displayInfo();
+    }
+}
+
+
+...................
+
+java -cp /tmp/qnt6ki4UDE/Main
+Electric Car Brand: Tesla
+Electric Car Color: Blue
+Electric Car Year: 2023
+Battery Life: 12 hours
+
+=== Code Execution Successful ===
+
