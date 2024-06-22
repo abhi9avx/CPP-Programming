@@ -1,0 +1,48 @@
+// Define the Car class
+class Car {
+    String brand;
+    String color;
+    int year;
+    
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Color: " + color);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Define the ElectricCar class that inherits from Car
+class ElectricCar extends Car {
+    int batteryLife;
+    
+    void displayBatteryLife() {
+        System.out.println("Battery Life: " + batteryLife + " hours");
+    }
+}
+
+// Main class to test the ElectricCar class
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of the ElectricCar class
+        ElectricCar myElectricCar = new ElectricCar();
+        
+        // Set properties of the electric car
+        myElectricCar.brand = "Tesla";
+        myElectricCar.color = "Blue";
+        myElectricCar.year = 2023;
+        myElectricCar.batteryLife = 12;
+        
+        // Call methods to display car and battery information
+        myElectricCar.displayInfo();
+        myElectricCar.displayBatteryLife();
+    }
+}
+
+
+...................
+
+java -cp /tmp/sSw4mWgtPy/Main
+Brand: Tesla
+Color: Blue
+Year: 2023
+Battery Life: 12 hours
